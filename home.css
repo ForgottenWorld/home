@@ -29,8 +29,8 @@ body::before {
   top: -10px;
   left: -10px;
   content: "";
-  width: calc(100% + 10%);
-  height: calc(100% + 10%);
+  width: calc(100% + 20px);
+  height: calc(100% + 20px);
   background-image: url(https://static.forgottenworld.it/bg2.webp);
   background-size: cover;
   z-index: -1000;
