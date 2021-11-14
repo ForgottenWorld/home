@@ -74,7 +74,7 @@ main {
   margin-bottom: 32px;
   transition: transform linear .1s, background-color linear .2s;
   cursor: pointer;
-  font-family: Minecrafter;
+  font-family: Minecrafter, sans-serif;
 }
 
 .join-btn:hover {
@@ -160,7 +160,7 @@ body:not(.show-info) .modal-wrapper {
 }
 
 nav {
-  font-family: Minecrafter;
+  font-family: Minecrafter, sans-serif;
   display: flex;
   border-radius: 8px;
   overflow: hidden;
