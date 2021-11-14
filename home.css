@@ -1,15 +1,42 @@
+@font-face {
+  font-family: Minecrafter;
+  src: url(fonts/Minecrafter_3.woff2) format("woff2"),
+    url(fonts/Minecrafter_3.ttf) format("ttf");
+}
+
 body {
+  position: relative;
   justify-content: center;
   font-size: 14px;
   margin: 0;
   height: 100vh;
-  background-image: url(https://static.forgottenworld.it/bg.jpg);
-  background-size: cover;
+  overflow: hidden;
+  font-family: "Montserrat", sans-serif;
 }
 
-@font-face {
-  font-family: Minecrafter;
-  src: url(fonts/Minecrafter_3.woff2) format("woff2"), url(fonts/Minecrafter_3.ttf) format("ttf");
+body::before {
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  content: "";
+  width: calc(100% + 10%);
+  height: calc(100% + 10%);
+  background-image: url(https://static.forgottenworld.it/bg2.webp);
+  background-size: cover;
+  z-index: -1000;
+  filter: blur(2px);
+}
+
+@media (prefers-color-scheme: dark) {
+  body::before {
+    background-image: url(https://static.forgottenworld.it/bg1.webp);
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  body::before {
+    background-image: url(https://static.forgottenworld.it/bg2.webp);
+  }
 }
 
 body,
@@ -21,6 +48,97 @@ main {
 
 main {
   flex: 0;
+  padding-top: 32px;
+}
+
+.join-btn {
+  appearance: none;
+  --webkit-appearance: none;
+  border-radius: 8px;
+  padding: 16px 24px;
+  font-size: 1.3rem;
+  border: none;
+  background-color: rgb(253, 167, 37);
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.4);
+  color: white;
+  margin-bottom: 32px;
+  transition: transform linear .1s, background-color linear .2s;
+  cursor: pointer;
+  font-family: Minecrafter;
+}
+
+.join-btn:hover {
+  background-color: rgb(253, 195, 37);
+  transform: translateY(-4px);
+}
+
+.modal-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+body:not(.show-info) .modal-wrapper {
+  display: none;
+}
+
+.modal-info {
+  width: 100%;
+  max-width: 600px;
+  height: 100%;
+  max-height: 600px;
+  background: rgba(255, 255, 255, 0.5);
+  padding: 16px;
+  box-sizing: border-box;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.modal-info button {
+  appearance: none;
+  --webkit-appearance: none;
+  border: none;
+  border-radius: 4px;
+  height: 32px;
+  padding: 0 16px;
+  font-family: Montserrat, sans-serif;
+  background: rgba(0, 0, 0, 0.2);
+  transition: background-color linear .2s;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .4);
+  color: white;
+  font-size: 1.1rem;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, .8);
+  cursor: pointer;
+}
+
+.modal-info button:hover {
+  background: rgba(80, 80, 80, 0.3);
+}
+
+.info-content {
+  width: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  box-sizing: border-box;
+  flex: 1;
+  border-radius: 4px;
+  box-shadow: inset 0 0 4px 1px rgba(0, 0, 0, 0.2);
+  color: #fff;
+  text-align: justify;
+  line-height: 1.6;
+  font-size: 1.1rem;
+  margin-top: 16px;
+  text-shadow: 0 2px 2px rgba(0, 0, 0, .8);
 }
 
 nav {
@@ -29,7 +147,6 @@ nav {
   border-radius: 8px;
   overflow: hidden;
   user-select: none;
-  margin-top: 64px;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
 }
 
@@ -57,35 +174,35 @@ nav > a:hover {
 }
 
 footer {
-    display: flex;
-    padding-top: 64px;
+  display: flex;
+  padding-top: 64px;
 }
 
 footer a {
-    display: block;
-    width: 40px;
-    height: 40px;
-    padding: 8px;
-    margin: 0 8px;
-    border-radius: 4px;
-    box-sizing: border-box;
-    transition: box-shadow linear .2s;
+  display: block;
+  width: 40px;
+  height: 40px;
+  padding: 8px;
+  margin: 0 8px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  transition: box-shadow linear 0.2s;
 }
 
 footer a:hover {
-    box-shadow: inset 0 0 4px 2px #fff4;
+  box-shadow: inset 0 0 4px 2px #fff4;
 }
 
 footer img {
-    filter:invert();
+  filter: invert();
 }
 
 @media screen and (max-width: 600px) {
-    nav {
-        flex-direction: column;
-    }
-    .fw-logo {
-        width: 240px;
-        height: 187px;
-    }
+  nav {
+    flex-direction: column;
+  }
+  .fw-logo {
+    width: 240px;
+    height: 187px;
+  }
 }
