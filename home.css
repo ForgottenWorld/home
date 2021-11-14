@@ -1,5 +1,6 @@
 @font-face {
   font-family: Minecrafter;
+  font-display: swap;
   src: url(fonts/Minecrafter_3.woff2) format("woff2"),
     url(fonts/Minecrafter_3.ttf) format("ttf");
 }
