@@ -104,6 +104,13 @@ body:not(.show-info) .modal-wrapper {
   align-items: flex-end;
 }
 
+@media screen and (max-width: 600px) {
+  .modal-info {
+    border-radius: 0;
+    max-height: none;
+  }
+}
+
 .modal-info button {
   appearance: none;
   --webkit-appearance: none;
