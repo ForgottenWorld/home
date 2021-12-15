@@ -74,12 +74,16 @@ main {
   text-shadow: 0 2px 2px rgba(0, 0, 0, .2);
   margin-bottom: 32px;
   transition: transform linear .1s, background-color linear .2s;
-  cursor: pointer;
   font-family: Minecrafter, sans-serif;
 }
 
-.join-btn:hover,
-.join-btn:focus {
+.join-btn.disabled {
+  opacity: 0.75;
+}
+
+.join-btn:not(.disabled):hover,
+.join-btn:not(.disabled):focus {
+  cursor: pointer;
   background-color: rgb(253, 195, 37);
   transform: translateY(-4px);
 }
