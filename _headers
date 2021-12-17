@@ -1,0 +1,7 @@
+/*
+  Cache-Control: public, max-age=86400
+  X-Frame-Options: DENY
+  Referrer-Policy: no-referrer
+  Cross-Origin-Embedder-Policy: require-corp
+  Cross-Origin-Opener-Policy: same-origin
+  Cross-Origin-Resource-Policy: same-site
