@@ -61,12 +61,14 @@ main {
 }
 
 .legacy-links {
+  padding-top: 32px;
   display: flex;
+  font-size: 1.2rem;
 }
 
 .legacy-links a {
-  padding: 0 16px;
-  font-size: 1.2rem;
+  padding: 0 8px;
+  text-decoration: none;
 }
 
 main {
@@ -86,7 +88,7 @@ main span a {
 
 footer {
   display: flex;
-  padding-top: 64px;
+  padding-top: 32px;
 }
 
 footer a {
