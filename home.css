@@ -63,11 +63,16 @@ main {
 main {
   flex: 0;
   padding-top: 32px;
-  font-size: 2rem;
+  font-size: 1.6rem;
+  text-align: center;
 }
 
 main span {
   margin-bottom: 32px;
+}
+
+main span a {
+  text-decoration: none;
 }
 
 footer {
