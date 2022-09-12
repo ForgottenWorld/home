@@ -40,6 +40,7 @@ body::before {
 @media (prefers-color-scheme: dark) {
   body::before {
     background-image: url(https://static.forgottenworld.it/bg1.webp);
+    color: white;
   }
 }
 
