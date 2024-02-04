@@ -1,4 +1,5 @@
 Canonical: https://forgottenworld.it/.well-known/security.txt
+Canonical: https://home.forgottenworld.it/.well-known/security.txt
 Canonical: https://forum.forgottenworld.it/.well-known/security.txt
 Canonical: https://wiki.forgottenworld.it/.well-known/security.txt
 
