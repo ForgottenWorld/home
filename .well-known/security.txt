@@ -1,0 +1,12 @@
+Canonical: https://forgottenworld.it/.well-known/security.txt
+Canonical: https://forum.forgottenworld.it/.well-known/security.txt
+Canonical: https://wiki.forgottenworld.it/.well-known/security.txt
+
+# Our security address
+Contact: mailto:security@forgottenworld.it
+
+# Our security policy
+Policy: https://github.com/ForgottenWorld/.github/blob/main/SECURITY.md
+
+# Our preferred languages
+Preferred-Languages: en, it
